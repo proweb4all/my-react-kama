@@ -1,12 +1,16 @@
 .nav {
     grid-area: n;
     background-color: burlywood;
+    padding: 20px;
 }
 
-.item {
+.item a{
+    display: inline-block;
     color: white;
+    text-decoration: none;
+    padding: 5px;
 }
 
-.item.active {
+.item a.active {
     color: gold;
 }
