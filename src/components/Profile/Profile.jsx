@@ -1,17 +1,21 @@
 import React from 'react';
-// import s from './Profile.module.css';
+import s from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = () => {
-  return <div>
+  let postsData = [
+    { id: 1, message: 'Hi, how are you?', likesCount: 12 },
+    { id: 2, message: 'It\'s my first post', likesCount: 15 },
+    { id: 3, message: 'Hello, World!', likesCount: 7 }
+  ]
+  return (
     <div>
-      <img src='https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350' />
+      <ProfileInfo />
+      <hr></hr>
+      <MyPosts postsData={postsData} />
     </div>
-    <div>
-      ava + description
-    </div>
-    <MyPosts />
-  </div>
+  )
 }
 
 export default Profile;

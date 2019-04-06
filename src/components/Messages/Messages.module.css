@@ -1,0 +1,28 @@
+.messages_block {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  padding: 20px;
+  color: #fff;
+}
+
+.dialogs {}
+
+/* .dialog {
+  padding: 5px;
+  text-decoration: none;
+} */
+.dialog a{
+  display: inline-block;
+  padding: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+.active{
+  color: gold !important;
+}
+
+.messages {}
+
+.message {
+  padding: 5px;
+}

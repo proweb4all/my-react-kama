@@ -1,3 +1,9 @@
-/* .item {
-  color: greenyellow;
-} */
+.posts_block{
+  padding: 25px;
+}
+textarea{
+  display: block;
+}
+h3{
+  margin-top: 0;
+}

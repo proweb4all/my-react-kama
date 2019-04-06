@@ -1,7 +1,10 @@
 .item {
+  padding-top: 25px;
   color: greenyellow;
 }
 .item img{
+  display: inline-block;
   width: 50px;
   border-radius: 15px;
+  margin-right: 15px;
 }
