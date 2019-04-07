@@ -1,7 +1,11 @@
 .descr{
     padding: 25px;
 }
-img{
+.profile_img{
+    height: 200px;
+    overflow: hidden;
+}
+.profile_img img{
     display: block;
     width: 100%;
 }

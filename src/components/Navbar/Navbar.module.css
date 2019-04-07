@@ -1,16 +1,18 @@
 .nav {
     grid-area: n;
-    background-color: burlywood;
-    padding: 20px;
+    background-color: darkslategray;
+    padding: 20px 0;
 }
 
 .item a{
     display: inline-block;
+    width: 100%;
     color: white;
     text-decoration: none;
-    padding: 5px;
+    padding: 5px 20px;
 }
 
 .item a.active {
     color: gold;
+    background-color: rgba(255, 255, 255, .1);
 }

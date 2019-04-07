@@ -1,11 +1,12 @@
 .messages_block {
   display: grid;
   grid-template-columns: 2fr 10fr;
-  padding: 20px;
+  padding: 20px 0;
   color: #fff;
 }
 
-.dialogs {}
+.dialogs {
+}
 
 /* .dialog {
   padding: 5px;
@@ -13,16 +14,22 @@
 } */
 .dialog a{
   display: inline-block;
-  padding: 5px;
+  padding: 5px 20px;
   color: #fff;
   text-decoration: none;
 }
-.active{
+.dialogs a.active{
+  display: inline-block;
+  width: 100%;
   color: gold !important;
+  background-color: rgba(255, 255, 255, .1);
 }
 
-.messages {}
+.messages {
+  padding: 0 20px 15px;
+  background-color: rgba(255, 255, 255, .1);
+}
 
 .message {
-  padding: 5px;
+  padding: 5px 0;
 }

@@ -1,0 +1,9 @@
+.new_message{
+  /* padding: 25px; */
+}
+textarea{
+  display: block;
+}
+.new_message h3{
+  margin-bottom: 0;
+}
