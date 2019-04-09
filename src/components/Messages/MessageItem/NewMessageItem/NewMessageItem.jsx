@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './NewMessageItem.module.css';
-import {sendMessageCreator, updateNewMessageTextCreator} from '../../../../redux/state';
+import {sendMessageCreator, updateNewMessageTextCreator} from '../../../../redux/messages-reducer';
 
 //import Post from './Post/Post';
 
