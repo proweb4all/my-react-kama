@@ -2,12 +2,12 @@ import React from 'react';
 import s from './Messages.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import MessageItem from './MessageItem/MessageItem';
-import NewMessageItem from './MessageItem/NewMessageItem/NewMessageItem';
+import NewMessageItem from './NewMessageItem/NewMessageItem';
 
 const Messages = (props) => {
 
-  let dialogElements = props.state.dialogsData.map(d => <DialogItem id={d.id} name={d.name} /> );
-  let messageElements = props.state.messagesData.map(m => <MessageItem message={m.message} /> );
+  let dialogElements = props.messagesPages.dialogsData.map(d => <DialogItem id={d.id} name={d.name} /> );
+  let messageElements = props.messagesPages.messagesData.map(m => <MessageItem message={m.message} /> );
   
   return (
     <div className={s.messages_block}>
@@ -16,10 +16,11 @@ const Messages = (props) => {
       </div>
       <div className={s.messages}>
         {messageElements}
-        <NewMessageItem newMessageText={props.state.newMessageText} dispatch={props.dispatch} />
+        <NewMessageItem newMessageText={props.messagesPages.newMessageText} updateNewMessageText={props.updateNewMessageText}
+          sendMessage={props.sendMessage} />
       </div>
     </div >
   )
 }
-
+ 
 export default Messages;

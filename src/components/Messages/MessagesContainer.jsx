@@ -1,17 +1,18 @@
 import React from 'react';
-import s from './Messages.module.css';
-import DialogItem from './DialogItem/DialogItem';
-import MessageItem from './MessageItem/MessageItem';
-import NewMessageItem from './MessageItem/NewMessageItem/NewMessageItem';
 import Messages from './Messages';
+import {sendMessageCreator, updateNewMessageTextCreator} from '../../redux/messages-reducer';
+
 
 const MessagesContainer = (props) => {
-
-  let dialogElements = props.state.dialogsData.map(d => <DialogItem id={d.id} name={d.name} /> );
-  let messageElements = props.state.messagesData.map(m => <MessageItem message={m.message} /> );
-  
+  let state = props.store.getState().messagesPages;
+  let onSendMessageClick = () => {
+    props.store.dispatch(sendMessageCreator());
+  }
+  let onNewMessageChange = (text) => {
+    props.store.dispatch(updateNewMessageTextCreator(text));
+  }
   return (
-    <Messages />
+    <Messages messagesPages={state} updateNewMessageText={onNewMessageChange} sendMessage={onSendMessageClick} />
   )
 }
 
