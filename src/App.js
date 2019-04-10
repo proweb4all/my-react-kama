@@ -17,9 +17,11 @@ const App = (props) => {
         <Navbar />
         <div className='app-wrapper-content'>
           <Route path='/profile' render={() =>
-            <Profile store={props.store} />} />
+            // <Profile store={props.store} />} />
+            <Profile />} />
           <Route path='/messages' render={() =>
-            <MessagesContainer store={props.store} />} />
+            // <MessagesContainer store={props.store} />} />
+            <MessagesContainer />} />
           <Route path='/news' component={News} />
           <Route path='/music' component={Music} />
           <Route path='/settings' component={Settings} />
