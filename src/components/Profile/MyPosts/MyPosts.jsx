@@ -21,4 +21,13 @@ const MyPosts = (props) => {
   )
 }
 
+// const MyPosts = () => {
+//   return (
+//     <div className={s.posts_block}>
+//       <h3>My posts</h3>
+//     </div>
+//   )
+// }
+
+
 export default MyPosts;

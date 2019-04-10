@@ -3,20 +3,6 @@ import Messages from './Messages';
 import {sendMessageCreator, updateNewMessageTextCreator} from '../../redux/messages-reducer';
 import {connect} from 'react-redux';
 
-
-// const MessagesContainer = (props) => {
-//   let state = props.store.getState().messagesPages;
-//   let onSendMessageClick = () => {
-//     props.store.dispatch(sendMessageCreator());
-//   }
-//   let onNewMessageChange = (text) => {
-//     props.store.dispatch(updateNewMessageTextCreator(text));
-//   }
-//   return (
-//     <Messages messagesPages={state} updateNewMessageText={onNewMessageChange} sendMessage={onSendMessageClick} />
-//   )
-// }
-
 let mapStateToProps = (state) => {
   return {
     messagesPages: state.messagesPages
@@ -28,7 +14,15 @@ let mapDispatchToProps = (dispatch) => {
     sendMessage: () => {dispatch(sendMessageCreator())}
   }
 }
-
 const MessagesContainer = connect(mapStateToProps, mapDispatchToProps)(Messages);
+// const MessagesContainer = () => {
+//   return (
+//     <div>
+//       <Messages />
+//     </div >
+//   )
+// }
+
+
 
 export default MessagesContainer;
